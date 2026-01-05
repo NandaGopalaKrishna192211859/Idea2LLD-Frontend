@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +30,10 @@ class DraftProjectsActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerDrafts)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
+            finish()
+        }
 
         adapter = DraftAdapter(draftList) { draft ->
             val intent = Intent(this, CreateLLDActivity::class.java)

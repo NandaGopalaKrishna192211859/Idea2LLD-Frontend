@@ -79,11 +79,10 @@ class ModifyChatActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = ChatAdapter(chatList)
 
-        findViewById<Button>(R.id.btnBack).setOnClickListener {
-            finish() // goes back to Saved Projects
+
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
+            finish()
         }
-
-
 
         // ---------- Chat ----------
         addBotMessage(botQuestions[0])
@@ -103,9 +102,19 @@ class ModifyChatActivity : AppCompatActivity() {
             }
         }
 
+//        old
+//        btnDone.setOnClickListener {
+//            callModifyApi()
+//        }
+
         btnDone.setOnClickListener {
-            callModifyApi()
+            val i = Intent(this, GrowthLoadingActivity::class.java)
+            i.putExtra("PID", pid)
+            i.putExtra("MOD_TEXT", userMessages.joinToString("\n"))
+            startActivity(i)
+            finish()
         }
+
     }
 
     private fun addUserMessage(text: String) {
@@ -154,6 +163,7 @@ class ModifyChatActivity : AppCompatActivity() {
                 val img = JSONObject(res).optString("diagram_url", "")
 
                 runOnUiThread {
+
                     val i = Intent(this@ModifyChatActivity, GeneratedLLDActivity::class.java)
                     i.putExtra("PID", pid)
                     i.putExtra("IMAGE_URL", img)

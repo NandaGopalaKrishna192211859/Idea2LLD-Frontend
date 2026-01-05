@@ -63,20 +63,18 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="end">
 
             <!-- RENAME -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRename"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:minWidth="90dp"
                 android:layout_height="40dp"
                 android:text="Rename"
                 android:textAllCaps="false"
                 android:textSize="12sp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:minWidth="0dp"
                 android:textColor="@android:color/white"
                 app:backgroundTint="#26A69A"
                 app:cornerRadius="10dp"/>
@@ -84,16 +82,13 @@
             <!-- CONTINUE -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnContinue"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:minWidth="100dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="8dp"
                 android:text="Continue"
                 android:textAllCaps="false"
-                android:textSize="12sp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:minWidth="0dp"
+                android:textSize="13sp"
                 android:textColor="@android:color/white"
                 app:backgroundTint="#1E88E5"
                 app:cornerRadius="10dp"/>
@@ -101,16 +96,13 @@
             <!-- DELETE -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDelete"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:minWidth="90dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="8dp"
                 android:text="Delete"
-                android:textSize="12sp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:minWidth="0dp"
                 android:textAllCaps="false"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 app:backgroundTint="#E53935"
                 app:cornerRadius="10dp"/>

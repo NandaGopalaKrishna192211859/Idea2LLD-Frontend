@@ -9,7 +9,7 @@ object ApiClient {
         OkHttpClient.Builder().build()
     }
     // ⚠️ CHANGE IP if needed (same PC where Node.js runs)
-    const val BASE_URL = "http://10.144.205.122:5000/api"
+    const val BASE_URL = "http://10.213.92.122:5000/api"
     const val REGISTER_URL = "$BASE_URL/auth/register"
     const val LOGIN_URL = "$BASE_URL/auth/login"
     const val FORGOT_PASSWORD_URL = "$BASE_URL/auth/forgot-password"
@@ -43,7 +43,7 @@ object ApiClient {
 
     const val GET_CATEGORY_QUESTIONS_URL = "$BASE_URL/questions"
 
-    const val IMAGE_BASE_URL = "http://10.144.205.122:5000"
+    const val IMAGE_BASE_URL = "http://10.213.92.122:5000"
 //
     const val GET_INVESTORS_BY_CATEGORY_URL = "$BASE_URL/investors/category" // + /{category}
     const val GET_PROJECT_PACKAGE_URL = "$BASE_URL/projects/package"

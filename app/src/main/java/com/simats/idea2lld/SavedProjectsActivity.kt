@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,10 @@ class SavedProjectsActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerSaved)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        findViewById<ImageView>(R.id.btnBack).setOnClickListener {
+            finish()
+        }
 
         adapter = SavedProjectsAdapter(projectList) { project ->
 

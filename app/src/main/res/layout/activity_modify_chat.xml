@@ -10,49 +10,57 @@
     <LinearLayout
         android:id="@+id/headerModify"
         android:layout_width="0dp"
-        android:layout_height="110dp"
+        android:layout_height="120dp"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="20dp"
         android:background="@drawable/splash_gradient"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-
-        <!-- Top row -->
+        <!-- ICON + TEXT BLOCK -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="73dp"
+            android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <Button
+            <ImageView
                 android:id="@+id/btnBack"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:src="@drawable/ic_back"
-                android:tint="@android:color/white"
-                android:background="@android:color/transparent"
-                android:contentDescription="Back"/>
+                app:tint="@android:color/white" />
+            <!-- BACK ICON (IMAGE BUTTON – SAFE) -->
 
-
-            <TextView
+            <!-- TEXT BLOCK -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Modify Project"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:layout_marginStart="12dp"/>
-        </LinearLayout>
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tell us what you want to change or improve"
-            android:textSize="14sp"
-            android:textColor="#F1F1F1"
-            android:layout_marginTop="6dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modify Project"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Tell us what you want to change or improve"
+                    android:textColor="#F1F1F1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
+
 
     <!-- CHAT CONTAINER -->
     <androidx.cardview.widget.CardView
