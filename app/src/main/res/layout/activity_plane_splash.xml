@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient">
+
+    <!-- 🟡 BANNER (BACK / LEFT) -->
+    <include
+        android:id="@+id/bannerView"
+        layout="@layout/banner_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- 🧵 ROPE (MIDDLE) -->
+    <View
+        android:id="@+id/rope"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:background="#CCCCCC"
+        app:layout_constraintStart_toEndOf="@id/bannerView"
+        app:layout_constraintTop_toTopOf="@id/bannerView"
+        app:layout_constraintBottom_toBottomOf="@id/bannerView"/>
+
+    <!-- ✈️ PLANE (FRONT / RIGHT) -->
+    <ImageView
+        android:id="@+id/ivPlane"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_plane_white"
+        app:layout_constraintStart_toEndOf="@id/rope"
+        app:layout_constraintTop_toTopOf="@id/bannerView"
+        app:layout_constraintBottom_toBottomOf="@id/bannerView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

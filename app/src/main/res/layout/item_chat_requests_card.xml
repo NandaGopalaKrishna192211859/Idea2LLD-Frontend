@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#FEF3E2">
+
+    <LinearLayout
+        android:id="@+id/connectorsCard"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:padding="18dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Your Connectors"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#7C2D12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:text="Chat and collaborate with founders you are connected with"
+                android:textSize="14sp"
+                android:textColor="#92400E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- FOOTER BUTTON -->
+        <TextView
+            android:id="@+id/btnViewChat"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="View Chat"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#A16207"
+            android:foreground="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

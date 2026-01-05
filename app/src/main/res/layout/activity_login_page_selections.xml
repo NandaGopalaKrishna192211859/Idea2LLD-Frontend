@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- ================= LOGIN FORM ================= -->
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Back Arrow (FIXED HEIGHT) -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="#000000"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome back! Please login to continue"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Email Field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_email"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/emailInput"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Email address"
+                android:textColorHint="#888888"
+                android:textColor="@color/black"
+                android:background="@null"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
+
+        <!-- Password Field -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/edittext_bg"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_lock"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:id="@+id/passwordInput"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="#888888"
+                android:textColor="@color/black"
+                android:background="@null"
+                android:paddingStart="10dp"/>
+        </LinearLayout>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#FF3B30"
+            android:textSize="13sp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Login"
+            android:id="@+id/btnLogin"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#FF3B30"
+            android:layout_marginTop="24dp"
+            app:cornerRadius="14dp"/>
+
+        <!-- Sign Up -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:text="Don't have an account? "
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/Signupgo"
+                android:text="Sign up"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF3B30"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ================= ROLE SELECTION ================= -->
+    <LinearLayout
+        android:id="@+id/roleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone"
+        android:gravity="top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Top Icon -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_role_main"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Role"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#0A0A0A"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Select how you want to use the platform"
+            android:textSize="14sp"
+            android:textColor="#6E6E6E"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Founder Card -->
+        <LinearLayout
+            android:id="@+id/founderCard"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/role_card"
+            android:layout_marginTop="48dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_founder"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/founderTitle"
+                    android:text="I'm a Founder"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/founderDesc"
+                    android:text="Create LLD diagrams and connect with investors"
+                    android:textSize="12sp"
+                    android:textColor="#F2F2F2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Investor Card -->
+        <LinearLayout
+            android:id="@+id/investorCard"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/role_card"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_investor"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/investorTitle"
+                    android:text="I'm an Investor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#0A0A0A"/>
+
+                <TextView
+                    android:id="@+id/investorDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Discover founders and invest in startups"
+                    android:textColor="#6E6E6E"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- NEXT BUTTON -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Next"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#1E90FF"
+            android:layout_marginTop="32dp"
+            app:cornerRadius="14dp"/>
+
+        <!-- BACK TEXT -->
+        <TextView
+            android:id="@+id/roleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textSize="14sp"
+            android:textColor="#6E6E6E"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

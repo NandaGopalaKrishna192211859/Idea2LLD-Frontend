@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FC">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/splash_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/white"/>
+
+        <TextView
+            android:layout_marginStart="14dp"
+            android:text="Published Ideas"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- CONTENT -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <include
+            android:id="@+id/directCard"
+            layout="@layout/item_direct_requests_card"/>
+
+        <include
+            android:id="@+id/hubCard"
+            layout="@layout/item_hub_requests_card"/>
+
+        <include
+            android:id="@+id/chatRequestsCard"
+            layout="@layout/item_chat_requests_card"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

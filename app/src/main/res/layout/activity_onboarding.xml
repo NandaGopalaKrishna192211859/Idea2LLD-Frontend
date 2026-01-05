@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- ONBOARDING PAGES -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onboardingViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsLayout"/>
+
+    <!-- BUTTONS SECTION -->
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- NEXT BUTTON (BLUE) -->
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Next"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#2563EB"
+            android:layout_marginBottom="12dp" />
+
+        <!-- GET STARTED BUTTON (RED) -->
+        <Button
+            android:id="@+id/getStartedBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Get Started"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#FF3B30"
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <!-- SKIP BUTTON (WHITE WITH BLACK TEXT) -->
+        <Button
+            android:id="@+id/skipBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Skip"
+            android:textColor="#000000"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="4dp" />
+    </LinearLayout>
+
+    <!-- DOTS INDICATOR -->
+    <LinearLayout
+        android:id="@+id/onboardingDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonsLayout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

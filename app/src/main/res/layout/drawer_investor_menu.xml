@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="MissingConstraints">
+
+        <!-- INVESTOR NAME -->
+        <TextView
+            android:id="@+id/tvInvestorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Investor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:layout_marginBottom="24dp"/>
+        <!-- EDIT PROFILE -->
+        <LinearLayout
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/edit_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="16sp"
+                android:textColor="#111111"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+
+
+
+        <!-- LOGOUT -->
+        <LinearLayout
+            android:id="@+id/btnLogoutInvestor"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_logout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="16sp"
+                android:textColor="#111111"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

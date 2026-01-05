@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FC">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/splash_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/white"/>
+
+        <TextView
+            android:layout_marginStart="14dp"
+            android:text="Investors"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- INVESTOR HUB CARD -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/investorHubCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:text="Investor Hub"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#1E1E1E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Select this button to showcase your vision to Investors"
+                android:textSize="14.5sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- SUB STRIP -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#F1F5FF"
+                android:padding="14dp"
+                app:cornerRadius="18dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="Boost funding chances with right Investors"
+                    android:textSize="13sp"
+                    android:textColor="#374151"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_trending_up"
+                    app:tint="#D32F2F"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ROTATE STRIP -->
+    <LinearLayout
+        android:id="@+id/rotateStrip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/investorHubCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Showing 5 relevant investors"
+            android:textSize="13.5sp"
+            android:textColor="#4B5563"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRotate"
+            android:layout_width="132dp"
+            android:layout_height="44dp"
+            android:text="Rotate"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#D32F2F"
+            app:cornerRadius="18dp"
+            app:elevation="6dp"/>
+    </LinearLayout>
+
+    <!-- INVESTOR LIST -->
+    <!-- INVESTOR LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerInvestors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="14dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/rotateStrip"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- NEXT BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#2563EB"
+        app:cornerRadius="20dp"
+        app:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

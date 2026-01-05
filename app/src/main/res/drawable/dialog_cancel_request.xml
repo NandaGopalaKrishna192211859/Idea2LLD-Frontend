@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="22dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Cancel Request?"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:text="Are you sure you want to cancel this investor request?"
+        android:textColor="#6B7280"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/cbDontAskAgain"
+        android:layout_marginTop="14dp"
+        android:text="Don't ask me again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

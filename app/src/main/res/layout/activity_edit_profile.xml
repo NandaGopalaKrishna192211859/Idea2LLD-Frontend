@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:background="@drawable/splash_gradient">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                app:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:text="Edit Profile"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- PROFILE IMAGE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user"
+                android:background="@color/white"
+                app:shapeAppearanceOverlay="@style/CircleImageStyle"/>
+
+
+            <Button
+                android:id="@+id/btnEditImage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Edit Image"
+                android:backgroundTint="#FF3B30"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+        <!-- PERSONAL DETAILS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:text="Full Name"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:hint="Enter full name"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Company / Fund Name"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etCompany"
+                android:hint="Enter company or fund name"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Phone Number"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:hint="Enter phone number"
+                android:inputType="phone"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Investment Range"
+                android:textStyle="bold"
+                android:textColor="#2563EB"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Minimum Investment"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etMinInvestment"
+                android:hint="Minimum amount"
+                android:inputType="number"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Maximum Investment"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etMaxInvestment"
+                android:hint="Maximum amount"
+                android:inputType="number"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Past Investments"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etPastInvestments"
+                android:hint="Startup names (comma separated)"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
+        <!-- INVESTMENT TYPE -->
+        <TextView
+            android:text="Investment Type"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:textColor="#2563EB"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupInvestmentType"
+            app:singleSelection="true"
+            app:chipSpacing="8dp"
+            android:padding="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:text="Angel"
+                android:checkable="true"
+                android:textColor="#000000"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:text="VC"
+                android:checkable="true"
+                android:textColor="#000000"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:text="Seed"
+                android:checkable="true"
+                android:textColor="#000000"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.chip.Chip
+                android:text="Pre-Seed"
+                android:checkable="true"
+                android:textColor="#000000"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- INDUSTRY -->
+        <TextView
+            android:text="Industry Preferences"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:textColor="#2563EB"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupIndustries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:singleSelection="false"
+            app:chipSpacing="8dp">
+
+            <com.google.android.material.chip.Chip
+                android:text="Commerce &amp; Retail"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Food &amp; Hospitality"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Health &amp; Wellness"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Social &amp; Communication"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Finance &amp; Banking (FinTech)"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Transportation &amp; Mobility"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Education &amp; Learning (EdTech)"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Enterprise &amp; Productivity (SaaS)"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:text="Other"
+                android:checkable="true"
+                android:textColor="@color/chip_text_black"
+                app:chipBackgroundColor="@color/chip_bg_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- BIO -->
+        <!-- BIO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:text="Bio"
+                android:textStyle="bold"
+                android:textColor="#111827"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etBio"
+                android:hint="Write a short bio about yourself"
+                android:minLines="4"
+                android:gravity="top"
+                android:background="@drawable/edit_box_bg"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#9E9E9E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+        <!-- SUBMIT -->
+        <!-- SAVE BUTTON -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Save Changes"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/primary_button_bg"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            android:elevation="4dp"/>
+
+    </LinearLayout>
+</ScrollView>

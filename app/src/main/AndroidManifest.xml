@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Idea2LLD"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:usesCleartextTraffic">
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FSConnectorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvestorRequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewInvestorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YourHubRequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YourDirectRequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProjectPackageDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PublishedIdeasHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SendSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ImagePreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProjectPackagePreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvestorListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ModifyChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeneratedLLDActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DraftProjectsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavedProjectsActivity"
+            android:exported="false" />
+        <activity android:name=".PlaneSplashActivity" />
+        <activity
+            android:name=".CategorySpinnerAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".InvestorDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FounderDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddProfileImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Idea2LLD.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InvestorRegistrationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreateLLDActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPageSelectionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyOtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

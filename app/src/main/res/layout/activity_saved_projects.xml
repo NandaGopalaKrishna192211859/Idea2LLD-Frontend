@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/headerSaved"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/splash_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Projects"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your generated LLD diagrams"
+            android:textSize="14sp"
+            android:textColor="#EEEEEE"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+    <!-- SAVED PROJECTS LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSaved"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/headerSaved"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- EMPTY STATE -->
+    <TextView
+        android:id="@+id/tvEmptySaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No saved projects yet"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/headerSaved"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

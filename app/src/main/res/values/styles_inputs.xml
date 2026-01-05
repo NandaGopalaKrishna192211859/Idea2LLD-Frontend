@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CircleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ================= INPUT ROW ================= -->
+    <style name="InputRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <!-- ================= INPUT ICON ================= -->
+    <style name="InputIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:tint">#888888</item>
+    </style>
+
+    <!-- ================= INPUT FIELD ================= -->
+    <style name="InputField">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#888888</item>
+    </style>
+
+    <!-- ================= PLAIN INPUT ================= -->
+    <style name="PlainInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#888888</item>
+    </style>
+
+    <!-- ================= NOTE INPUT ================= -->
+    <style name="NoteInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minLines">3</item>
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#888888</item>
+    </style>
+
+    <!-- ================= INDUSTRY CHIP ================= -->
+    <style name="IndustryChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="chipStrokeColor">@color/chip_border</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="chipCornerRadius">16dp</item>
+    </style>
+
+</resources>

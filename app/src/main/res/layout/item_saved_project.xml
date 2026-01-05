@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#89CFEF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- TITLE + VERSION -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvProjectTitle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Saved Project"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvProjectVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v1.0"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <!-- DATE -->
+        <TextView
+            android:id="@+id/tvProjectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Last updated"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="12dp"
+            android:background="#CCCCCC"/>
+
+        <!-- ACTION BUTTONS -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ROW 1 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRename"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="Rename"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="#26A69A"
+                    app:cornerRadius="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnModify"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Modify"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="#43A047"
+                    app:cornerRadius="10dp"/>
+            </LinearLayout>
+
+            <!-- ROW 2 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPublish"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="Publish"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="#7E57C2"
+                    app:cornerRadius="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="#E53935"
+                    app:cornerRadius="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Idea2LLD" parent="Theme.Material3.DayNight.NoActionBar" />
+
+    <style name="Theme.Idea2LLD" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
+    <!-- PURE custom splash theme – no Android 12 default splash -->
+    <style name="Theme.Idea2LLD.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Show your splash background immediately -->
+        <item name="android:windowBackground">@drawable/splash_gradient</item>
+        <!-- Hide default launcher splash -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+
+</resources>
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA">
+
+    <!-- =========================
+         LET'S GET STARTED SCREEN
+    ========================== -->
+    <LinearLayout
+        android:id="@+id/btnGetStarted"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:background="@drawable/splash_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your LLD"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Answer a few simple questions\nand generate your system design"
+            android:textSize="14sp"
+            android:textColor="#EAEAEA"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnStartNow"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Let’s Get Started"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginTop="32dp"
+            app:cornerRadius="16dp"/>
+    </LinearLayout>
+
+
+    <!-- =========================
+         QUESTION SCREEN
+    ========================== -->
+    <LinearLayout
+        android:id="@+id/questionLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="20dp"
+            android:background="@drawable/splash_gradient"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvQuestionNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_blue"/>
+
+        <!-- BODY -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvQuestionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#111111"/>
+
+                <EditText
+                    android:id="@+id/etAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Type your answer here..."
+                    android:textColor="#111111"
+                    android:textColorHint="#888888"
+                    android:background="@drawable/edittext_bg"
+                    android:padding="14dp"/>
+
+                <Spinner
+                    android:id="@+id/spCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:background="@drawable/edittext_bg"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- FOOTER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Back"
+                android:textColor="#1565C0"
+                android:backgroundTint="#E3F2FD"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1565C0"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

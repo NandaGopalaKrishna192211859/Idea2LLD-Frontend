@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- ICON BACKGROUND -->
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:background="@drawable/bg_icon_soft">
+
+            <ImageView
+                android:id="@+id/cardIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_plus"/>
+        </LinearLayout>
+
+        <!-- TEXT AREA -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#111111"/>
+
+            <TextView
+                android:id="@+id/cardSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtitle goes here"
+                android:textSize="13sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

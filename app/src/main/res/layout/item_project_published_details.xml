@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- BACKGROUND IMAGE -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/req_card_bg1"/>
+
+        <!-- WHITE OVERLAY FOR READABILITY -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CCFFFFFF"/>
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="18dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- ICON -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_project"
+                android:background="@drawable/bg_circle_soft"
+                android:padding="10dp"/>
+
+            <!-- TEXT -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Project details sent"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Tap to view full project details"
+                    android:textSize="13sp"
+                    android:textColor="#475569"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>
