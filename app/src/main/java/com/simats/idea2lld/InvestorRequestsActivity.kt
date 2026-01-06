@@ -15,10 +15,14 @@ import org.json.JSONObject
 import java.io.IOException
 import com.simats.idea2lld.utils.ButtonUpdationAdapter
 import com.simats.idea2lld.utils.ProfileImageLoader
+import com.simats.idea2lld.utils.NotificationHelper
+
 
 class InvestorRequestsActivity : AppCompatActivity() {
 
     private lateinit var container: LinearLayout
+    private val notifiedRequests = HashSet<Int>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,6 +80,8 @@ class InvestorRequestsActivity : AppCompatActivity() {
                         val o = arr.getJSONObject(i)
 
                         val status = o.optString("response_status", "pending")
+
+
 
 
                         val card = layoutInflater.inflate(

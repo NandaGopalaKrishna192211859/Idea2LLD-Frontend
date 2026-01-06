@@ -16,6 +16,8 @@ import com.simats.idea2lld.utils.SessionManager
 import okhttp3.*
 import org.json.JSONArray
 import java.io.IOException
+import com.simats.idea2lld.utils.NotificationHelper
+
 
 class ViewInvestorsActivity : AppCompatActivity() {
 
@@ -144,6 +146,7 @@ class ViewInvestorsActivity : AppCompatActivity() {
                                     startActivity(intent)
                                 }
 
+
                             }
 
                             "rejected" -> {
@@ -151,6 +154,8 @@ class ViewInvestorsActivity : AppCompatActivity() {
                                 btnReject.isEnabled = false
                                 btnReject.visibility = View.VISIBLE
                                 btnDelete.visibility = View.VISIBLE
+
+
                             }
                         }
 

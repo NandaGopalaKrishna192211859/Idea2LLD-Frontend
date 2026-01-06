@@ -25,6 +25,11 @@ class GrowthLoadingActivity : AppCompatActivity() {
     private lateinit var imgDrop: ImageView
     private lateinit var btnCheck: Button
 
+    private lateinit var dot1: ImageView
+    private lateinit var dot2: ImageView
+    private lateinit var dot3: ImageView
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_growth_loading)
@@ -32,6 +37,13 @@ class GrowthLoadingActivity : AppCompatActivity() {
         imgJug = findViewById(R.id.imgJug)
         imgDrop = findViewById(R.id.imgDrop)
         btnCheck = findViewById(R.id.btnCheck)
+
+        dot1 = findViewById(R.id.dot1)
+        dot2 = findViewById(R.id.dot2)
+        dot3 = findViewById(R.id.dot3)
+
+        startDotAnimation()
+
 
         btnCheck.visibility = View.GONE
 
@@ -66,6 +78,9 @@ class GrowthLoadingActivity : AppCompatActivity() {
             btnCheck.animate().alpha(1f).setDuration(500).start()
 
             rotateJugBackAfterButton()
+
+            findViewById<View>(R.id.loadingTextContainer).visibility = View.GONE
+
 
         }, 8000)
 
@@ -111,6 +126,31 @@ class GrowthLoadingActivity : AppCompatActivity() {
             }
         })
     }
+
+    private fun startDotAnimation() {
+
+        val dots = listOf(dot1, dot2, dot3)
+        val handler = Handler(Looper.getMainLooper())
+        var index = 0
+
+        val runnable = object : Runnable {
+            override fun run() {
+
+                // reset all dots
+                dots.forEach { it.alpha = 0.3f }
+
+                // highlight one dot
+                dots[index].alpha = 1f
+
+                index = (index + 1) % dots.size
+
+                handler.postDelayed(this, 400)
+            }
+        }
+
+        handler.post(runnable)
+    }
+
 
     private fun startJugPouring() {
         imgJug.animate()

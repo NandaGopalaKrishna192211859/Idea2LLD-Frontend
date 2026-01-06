@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,9 @@
         android:theme="@style/Theme.Idea2LLD"
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic">
+        <activity
+            android:name=".NotificationsActivity"
+            android:exported="false" />
         <activity
             android:name=".GrowthLoadingActivity"
             android:exported="false" />

@@ -12,15 +12,25 @@ import com.simats.idea2lld.network.ApiClient
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody
 import android.util.Log
+import com.simats.idea2lld.utils.NotificationHelper
 
 class GeneratedLLDActivity : AppCompatActivity() {
 
+    private var notificationSent = false
+    private val KEY_NOTIFICATION_SENT = "notification_sent"
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        notificationSent = savedInstanceState?.getBoolean(KEY_NOTIFICATION_SENT) ?: false
+
         setContentView(R.layout.activity_generated_lldactivity)
 
         val imageView = findViewById<PhotoView>(R.id.ivDiagram)
         val btnDone = findViewById<Button>(R.id.btnDone)
+
+
 
         val imageUrl = intent.getStringExtra("IMAGE_URL")
         val renameOnly = intent.getBooleanExtra("RENAME_ONLY", false)
@@ -45,6 +55,15 @@ class GeneratedLLDActivity : AppCompatActivity() {
                 .dontTransform()
                 .into(imageView)
 
+            if (!notificationSent) {
+                NotificationHelper.push(
+                    this,
+                    "Image generated successfully",
+                    "Your Low-Level Design is ready"
+                )
+                notificationSent = true
+            }
+
         }
 
 
@@ -52,8 +71,14 @@ class GeneratedLLDActivity : AppCompatActivity() {
             setResult(RESULT_OK)
             finish()
         }
+
+
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean(KEY_NOTIFICATION_SENT, notificationSent)
+    }
     fun showNameDialog(pid: Int) {
         val input = EditText(this)
         input.hint = "Project name"

@@ -26,6 +26,66 @@
         android:src="@drawable/ic_water_drops"
         android:visibility="invisible" />
 
+    <!-- CENTER LOADING TEXT -->
+    <LinearLayout
+        android:id="@+id/loadingTextContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvPleaseWait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please wait"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B" />
+
+        <TextView
+            android:id="@+id/tvSubText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="We are Modifying your Project"
+            android:textSize="14sp"
+            android:textColor="#475569" />
+
+        <!-- DOTS ROW -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dot1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="6dp"
+                android:alpha="0.3"
+                android:src="@drawable/dot" />
+
+            <ImageView
+                android:id="@+id/dot2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="6dp"
+                android:alpha="0.3"
+                android:src="@drawable/dot" />
+
+            <ImageView
+                android:id="@+id/dot3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:alpha="0.3"
+                android:src="@drawable/dot" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <!-- PLANT -->
     <ImageView
@@ -43,11 +103,13 @@
         android:id="@+id/btnCheck"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:text="Wanna Check"
+        android:text="Check the Design"
         android:textAllCaps="false"
         android:backgroundTint="#1E88E5"
         android:textColor="@android:color/white"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="40dp"
         android:visibility="gone"/>
+
+
 </FrameLayout>

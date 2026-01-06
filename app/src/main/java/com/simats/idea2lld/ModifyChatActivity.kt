@@ -186,18 +186,35 @@ class ModifyChatActivity : AppCompatActivity() {
             val tv = TextView(parent.context)
             tv.setPadding(24, 16, 24, 16)
             return Holder(tv)
+
+            tv.setPadding(24, 16, 24, 16)
+            tv.layoutParams = ViewGroup.MarginLayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+            ).apply {
+                bottomMargin = 12
+            }
+
         }
 
         override fun onBindViewHolder(holder: Holder, position: Int) {
             val msg = items[position]
+
             holder.tv.text = msg.text
-            holder.tv.setBackgroundColor(
-                if (msg.isUser) Color.parseColor("#1E88E5")
-                else Color.parseColor("#E3F2FD")
-            )
-            holder.tv.setTextColor(if (msg.isUser) Color.WHITE else Color.BLACK)
-            holder.tv.gravity = if (msg.isUser) Gravity.END else Gravity.START
+            holder.tv.textSize = 14f
+            holder.tv.maxWidth = (holder.tv.resources.displayMetrics.widthPixels * 0.75).toInt()
+
+            if (msg.isUser) {
+                holder.tv.setBackgroundResource(R.drawable.bg_chat_user)
+                holder.tv.setTextColor(Color.WHITE)
+                holder.tv.gravity = Gravity.END
+            } else {
+                holder.tv.setBackgroundResource(R.drawable.bg_chat_bot)
+                holder.tv.setTextColor(Color.BLACK)
+                holder.tv.gravity = Gravity.START
+            }
         }
+
 
         override fun getItemCount() = items.size
     }

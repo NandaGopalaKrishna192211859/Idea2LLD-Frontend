@@ -10,12 +10,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.card.MaterialCardView
 import com.simats.idea2lld.utils.SessionManager
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 class FounderDashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_founder_dashboard)
+        requestNotificationPermission()
+
 
         // -------------------------------
         // Drawer
@@ -79,6 +86,10 @@ class FounderDashboardActivity : AppCompatActivity() {
         }
 
 
+        findViewById<ImageView>(R.id.icNotification).setOnClickListener {
+            startActivity(Intent(this, NotificationsActivity::class.java))
+        }
+
         // -------------------------------
         // Drawer Logout
         // -------------------------------
@@ -93,4 +104,21 @@ class FounderDashboardActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(
+                    this,
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+                    101
+                )
+            }
+        }
+    }
+
 }
