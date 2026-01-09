@@ -367,5 +367,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <TextView
+            android:id="@+id/poweredByText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powered by SIMATS"
+            android:textColor="#9E9E9E"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"/>
+
+
     </LinearLayout>
 </ScrollView>

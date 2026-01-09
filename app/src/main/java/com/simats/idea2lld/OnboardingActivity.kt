@@ -88,8 +88,9 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun goToLogin() {
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, SubscriptionActivity::class.java))
         finish()
+
     }
 
     private fun setupIndicators(count: Int) {

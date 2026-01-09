@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="Idea2LLD">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-01-03T06:33:37.407353200Z">
+        <DropdownSelection timestamp="2026-01-08T03:51:00.274958400Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="PhysicalDevice" identifier="serial=RZ8T7117NEB" />

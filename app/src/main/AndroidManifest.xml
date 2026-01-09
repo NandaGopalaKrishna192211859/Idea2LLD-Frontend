@@ -20,6 +20,9 @@
             android:name=".NotificationsActivity"
             android:exported="false" />
         <activity
+            android:name=".SubscriptionActivity"
+            android:exported="false" />
+        <activity
             android:name=".GrowthLoadingActivity"
             android:exported="false" />
         <activity
