@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.simats.idea2lld"
         minSdk = 31
-        targetSdk = 33
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -57,6 +57,7 @@ dependencies {
     implementation("com.github.chrisbanes:PhotoView:2.3.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.android.billingclient:billing-ktx:6.1.0")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
